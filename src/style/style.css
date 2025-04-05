@@ -1,0 +1,222 @@
+* {
+  margin: 10px 20px;
+}
+.link {
+  font-size: 30px;
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+/* Завдання 1 */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.box {
+  height: 190px;
+  width: calc(50% - 20px);
+  margin: 10px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+.box:first-child {
+  background-color: blueviolet;
+  background-image: url(../img/bird.webp);
+  background-size: 25%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.box:nth-child(2) {
+  background-color: #30775c;
+  background-image: url(../img/cat.webp);
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+.box:nth-child(3) {
+  background-color: skyblue;
+  background-image: url(../img/dog.webp);
+  background-position: left;
+  background-repeat: repeat-y;
+}
+.box:nth-child(4) {
+  background-color: rgb(52, 52, 255);
+  background-image: url(../img/turtle.webp);
+}
+/* Завдання 2 */
+.overlay {
+  max-width: 1600px;
+  height: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid black;
+  background-image: linear-gradient(
+      to right,
+      rgba(199, 1, 1, 0.2),
+      rgba(10, 173, 45, 0.3)
+    ),
+    url(../img/fish.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+/* Завдання 3 */
+.exx {
+  font-size: 30px;
+  color: black;
+  margin: 50px;
+}
+/* 1 */
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: teal;
+  color: #fff;
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  gap: 5px;
+}
+.button::before {
+  content: "";
+  background-image: url(../img/car.webp);
+  background-color: #38fae0;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-size: contain;
+}
+/* 2 */
+.tasks-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.tasks-list li {
+  display: flex;
+  align-items: center;
+}
+
+.tasks-list li::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: url(../img/li.svg);
+  background-color: black;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 5px;
+}
+/* 3 */
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 500px;
+  margin-inline: auto;
+}
+.nav-link {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2em;
+  color: inherit;
+  text-decoration: none;
+}
+.nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  margin-top: 20px;
+  background-color: #ff5d5d;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+/* 4 */
+.list {
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+.list-item {
+  max-width: 350px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+.list-item:first-child:before {
+  content: "";
+  display: block;
+  background-image: url(../img/car.webp);
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  margin: auto;
+}
+.list-item:nth-child(2)::before {
+  content: "";
+  display: block;
+  background-image: url(../img/dog.webp);
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  margin: auto;
+}
+.list-item:nth-child(3)::before {
+  content: "";
+  display: block;
+  background-image: url(../img/cat.webp);
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  margin: auto;
+}
+/* 5 */
+.img_container {
+  width: 400px;
+  position: relative;
+}
+.img_container img {
+  width: 100%;
+}
+/* img-1 */
+.img_container_1::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(
+    to left bottom,
+    rgba(0, 217, 0, 0.3),
+    rgba(0, 0, 0, 0.3) 60%
+  );
+  top: 10px;
+  left: 10px;
+}
+/* img-2 */
+.img_container_2::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(217, 90, 0, 0.545),
+    rgba(249, 225, 15, 0.524)
+  );
+  top: 10px;
+  left: 10px;
+}
